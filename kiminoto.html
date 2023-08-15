@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" 
+content="width=divice-width, initial-scale =1.0">
+<title>I love you</title>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:sans-serif;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: coral;
+
+    }
+    .wrapper{
+        position: relative;
+        width: 600px;
+        height: 400px;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    h2{
+        font-size: 40px;
+        color: coral;
+        margin: 15px;
+
+    }
+    .btn-group{
+        width: 100px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+
+    }
+    button{
+        position: absolute;
+        width: 100px;
+        height: inherit;
+        font-size: 30px;
+        background-color: white;
+        border-radius: 15px;
+        border-color: coral;
+        outline: none;
+
+    }
+    button:nth-child(2){
+        margin-left:  200px;
+        background-color: white;
+        color: red;
+    }
+    button:nth-child(1){
+        margin-right:  200px;
+        background-color: coral;
+        color: white;
+    }
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2 class="question" align ="center">ចង់ប្រាប់ថា I Love U baby kiminoto :) <br>
+        Do you love me?</h2> 
+
+        <div class="btn-group">
+            <button class="yes-btn">Yes</button>
+            <button class="no-btn">No</button>
+        </div>
+    </div>
+<script>
+const wrapper=document.querySelector('.wrapper');
+const question=document.querySelector('.question');
+const yesBtn=document.querySelector('.yes-btn');
+const noBtn=document.querySelector('.no-btn');
+const wrapperRect=wrapper.getBoundingClientRect();
+const noBtnRect=noBtn.getBoundingClientRect();
+yesBtn.addEventListener('click',()=>{
+    question.innerHTML='Ok my love ចាប់ពីថ្ងៃនេះទៅយើងក្លាយជាសង្សារគ្នាហើយ​ Thanks for love me:)';
+});
+noBtn.addEventListener('mouseover',()=>{
+    const i=Math.floor(Math.random()*(wrapperRect.width-noBtnRect.width))
+    +1;
+    const j=Math.floor(Math.random()*(wrapperRect.width-noBtnRect.height))
+    +1;
+    noBtn.style.left=i+'px';
+    noBtn.style.top=j+'px';
+});
+
+</script>
+
+
+
+</body>
+
+
+
+
+
+</html>
